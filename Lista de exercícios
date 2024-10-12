@@ -1,0 +1,340 @@
+Exercício 1
+
+      Pseudocódigo
+var distanciaPercorrida: real
+var combustivelGasto: real
+var consumoMedio: real
+
+inicio
+  escreva("Qual a distância percorrida?")
+  leia(distanciaPercorrida)
+
+  escreva("Quantos litros foram gastos na corrida?")
+  leia(combustivelGasto)
+
+  consumoMedio <- distanciaPercorrida / combustivelGasto
+
+  escreva("Distância percorrida: " + distanciaPercorrida + " Km")
+  escreva("Combustível consumido: " + combustivelGasto + " L")
+  escreva("Consumo médio: " + consumoMedio + " Km/L")
+fim
+
+      Linguagem Java
+import java.util.Scanner;
+public class ConsumoMedio {
+public static void main(String[] args) {
+
+    // Declaração das variáveis
+    double distanciaPercorrida;
+    double combustivelGasto;
+    double consumoMedio;
+
+    // Criação do scanner para leitura de dados
+    Scanner scanner = new Scanner(System.in);
+
+    // Entrada de dados
+    System.out.println("Qual a distância percorrida?");
+    distanciaPercorrida = scanner.nextDouble();
+
+    System.out.println("Quantos litros foram gastos na corrida?");
+    combustivelGasto = scanner.nextDouble();
+
+    // Cálculo do consumo médio
+    consumoMedio = distanciaPercorrida / combustivelGasto;
+
+    // Exibição dos resultados
+    System.out.println("Distância percorrida: " + distanciaPercorrida + " Km");
+    System.out.println("Combustível consumido: " + combustivelGasto + " L");
+    System.out.println("Consumo médio: " + consumoMedio + " Km/L");
+
+    // Fim do Scanner
+    scanner.close();
+  }
+}
+
+
+
+
+Exercício 2
+
+      Pseudocódigo
+var salario: real
+var quantidadePendencias: inteiro
+
+inicio
+  escreva("Digite o salário do cliente:")
+  leia(salario)
+
+  escreva("Digite a quantidade de pendências do cliente:")
+  leia(quantidadePendencias)
+
+  se (salario > 2500.00) e (quantidadePendencias <= 2) então
+    escreva("Empréstimo aprovado")
+  senão
+    escreva("Empréstimo não aprovado")
+fim
+
+
+      Linguagem Java
+import java.util.Scanner;
+
+public class AprovacaoEmprestimo {
+public static void main(String[] args) {
+        
+        // Declaração das variáveis
+        double salario;
+        int quantidadePendencias;
+
+        // Criação do scanner para leitura de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.println("Digite o salário do cliente:");
+        salario = scanner.nextDouble();
+
+        System.out.println("Digite a quantidade de pendências do cliente:");
+        quantidadePendencias = scanner.nextInt();
+
+        // Verificação das condições para aprovação do empréstimo
+        if (salario > 2500.00 && quantidadePendencias <= 2) {
+            System.out.println("Empréstimo aprovado");
+        } else {
+            System.out.println("Empréstimo não aprovado");
+        }
+
+        // Fim do scanner
+        scanner.close();
+    }
+}
+
+
+
+
+Exercício 3
+
+      Pseudocódigo
+var valorOriginal: real
+var valorFinal: real
+var desconto: real
+
+inicio
+  escreva("Digite o valor original do produto:")
+  leia(valorOriginal)
+
+  desconto <- valorOriginal * 0.10
+  valorFinal <- valorOriginal - desconto
+
+  escreva("Valor original: " + valorOriginal)
+  escreva("Desconto: " + desconto)
+  escreva("Valor final com desconto: " + valorFinal)
+fim
+
+
+
+      Linguagem Java
+import java.util.Scanner;
+
+public class DescontoProduto {
+    public static void main(String[] args) {
+        // Declaração das variáveis
+        double valorOriginal;
+        double valorFinal;
+        double desconto;
+
+        // Criação do scanner para leitura de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitação do valor do produto
+        System.out.println("Digite o valor original do produto:");
+        valorOriginal = scanner.nextDouble();
+
+        // Cálculo do desconto de 10%
+        desconto = valorOriginal * 0.10;
+        valorFinal = valorOriginal - desconto;
+
+        // Exibição dos resultados
+        System.out.println("Valor original: R$ " + valorOriginal);
+        System.out.println("Desconto: R$ " + desconto);
+        System.out.println("Valor final com desconto: R$ " + valorFinal);
+
+        // Fechando o scanner
+        scanner.close();
+    }
+}
+
+
+
+Exercício 4
+
+      Pseudocódigo
+var opcao: inteiro
+var lanche: cadeia
+var preco: real
+
+inicio
+  escreva("Menu de Lanches:")
+  escreva("1 - Hambúrguer: R$ 10,00")
+  escreva("2 - Cachorro-quente: R$ 7,00")
+  escreva("3 - Batata Frita: R$ 5,00")
+  escreva("Escolha uma opção:")
+  leia(opcao)
+
+  caso opcao seja
+    1:
+      lanche <- "Hambúrguer"
+      preco <- 10.00
+      pare
+    2:
+      lanche <- "Cachorro-quente"
+      preco <- 7.00
+      pare
+    3:
+      lanche <- "Batata Frita"
+      preco <- 5.00
+      pare
+    outro:
+      escreva("Opção inválida")
+      pare
+
+  se opcao for 1 ou 2 ou 3 então
+    escreva("Lanche escolhido: " + lanche + " - Preço: R$ " + preco)
+fim
+
+
+      Linguagem Java
+import java.util.Scanner;
+
+public class FastFood {
+    public static void main(String[] args) {
+        // Declaração das variáveis
+        int opcao;
+        String lanche = "";
+        double preco = 0.0;
+
+        // Criação do scanner para leitura de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Exibição do menu
+        System.out.println("Menu de Lanches:");
+        System.out.println("1 - Hambúrguer: R$ 10,00");
+        System.out.println("2 - Cachorro-quente: R$ 7,00");
+        System.out.println("3 - Batata Frita: R$ 5,00");
+        System.out.println("Escolha uma opção:");
+        opcao = scanner.nextInt();
+
+        // Tratamento da escolha do usuário
+        switch (opcao) {
+            case 1:
+                lanche = "Hambúrguer";
+                preco = 10.00;
+                break;
+            case 2:
+                lanche = "Cachorro-quente";
+                preco = 7.00;
+                break;
+            case 3:
+                lanche = "Batata Frita";
+                preco = 5.00;
+                break;
+            default:
+                System.out.println("Opção inválida");
+                break;
+        }
+
+        // Exibição do lanche e preço, se a opção for válida
+        if (opcao == 1 || opcao == 2 || opcao == 3) {
+            System.out.println("Lanche escolhido: " + lanche + " - Preço: R$ " + preco);
+        }
+
+        // Fechando o scanner
+        scanner.close();
+    }
+}
+
+
+
+Exercício 5 - Extra
+
+      Pseudocódigo
+var salario: real
+var quantidadePendencias: inteiro
+var valorEmprestimo: real
+var numeroParcelas: inteiro
+var valorParcela: real
+var valorTotal: real
+
+inicio
+  escreva("Digite o salário do cliente:")
+  leia(salario)
+
+  escreva("Digite a quantidade de pendências do cliente:")
+  leia(quantidadePendencias)
+
+  se (salario > 2500.00) e (quantidadePendencias <= 2) então
+    escreva("Empréstimo aprovado")
+    
+    escreva("Digite o valor do empréstimo:")
+    leia(valorEmprestimo)
+    
+    escreva("Digite o número de parcelas:")
+    leia(numeroParcelas)
+    
+    valorTotal <- valorEmprestimo * (1 + 0.009 * numeroParcelas)
+    valorParcela <- valorTotal / numeroParcelas
+    
+    escreva("Valor de cada parcela: " + valorParcela)
+    escreva("Valor total a pagar: " + valorTotal)
+  senão
+    escreva("Empréstimo não aprovado")
+fim
+
+
+      Linguagem Java
+import java.util.Scanner;
+
+public class AprovacaoEmprestimo {
+    public static void main(String[] args) {
+        // Declaração das variáveis
+        double salario;
+        int quantidadePendencias;
+        double valorEmprestimo;
+        int numeroParcelas;
+        double valorParcela;
+        double valorTotal;
+
+        // Criação do scanner para leitura de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.println("Digite o salário do cliente:");
+        salario = scanner.nextDouble();
+
+        System.out.println("Digite a quantidade de pendências do cliente:");
+        quantidadePendencias = scanner.nextInt();
+
+        // Verificação das condições para aprovação do empréstimo
+        if (salario > 2500.00 && quantidadePendencias <= 2) {
+            System.out.println("Empréstimo aprovado");
+
+            // Receba o valor do empréstimo e o número de parcelas
+            System.out.println("Digite o valor do empréstimo:");
+            valorEmprestimo = scanner.nextDouble();
+
+            System.out.println("Digite o número de parcelas:");
+            numeroParcelas = scanner.nextInt();
+
+            // Calcular o valor total com juros simples de 0,9% ao mês
+            valorTotal = valorEmprestimo * (1 + 0.009 * numeroParcelas);
+            valorParcela = valorTotal / numeroParcelas;
+
+            // Exibir o valor de cada parcela e o valor total a pagar
+            System.out.println("Valor de cada parcela: R$ " + valorParcela);
+            System.out.println("Valor total a pagar: R$ " + valorTotal);
+        } else {
+            System.out.println("Empréstimo não aprovado");
+        }
+
+        // Fechando o scanner
+        scanner.close();
+    }
+}
